@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-1359" y="-4"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="kh3-pI-iWR">
             <objects>
-                <viewController id="PFl-Xu-q9B" customClass="ViewController" customModule="SinkOrSwim" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PFl-Xu-q9B" customClass="ImageViewController" customModule="SinkOrSwim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ug1-YE-zVu">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

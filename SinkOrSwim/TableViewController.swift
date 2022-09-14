@@ -53,7 +53,7 @@ class TableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        if let vc = segue.destination as? ViewController,
+        if let vc = segue.destination as? ImageViewController,
            let cell = sender as? UITableViewCell,
            let name = cell.textLabel?.text {
                 vc.displayImageName = name
