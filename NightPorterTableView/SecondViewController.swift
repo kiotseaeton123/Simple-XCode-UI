@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var timeLabel: UITextField!
     @IBOutlet weak var timeSlider: UISlider!
     
-    @IBOutlet weak var yourReturnLabel: UITextField!
+    @IBOutlet weak var investmentReturn: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +52,10 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func calculateReturn(_ sender: UIButton) {
-//        let annualReturn = initialInvestment * (1 + interest / 100)
-//        let compoundReturn = pow(annualReturn, time)
-//        
-//        yourReturnLabel.text = String(compoundReturn)
+        let annualReturn = initialInvestmentLabel * (1 + interest / 100)
+        let compoundReturn = pow(annualReturn, time)
+
+        investmentReturn.text = String(compoundReturn)
     }
-    
-
-
 }
+//!!!!!I was getting a 'getting a nil for optional' error due to different naming of a UILabel(investmentReturnLabel)

@@ -237,9 +237,12 @@
                                         <color key="tintColor" red="0.17344712309999999" green="0.61924888609999995" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Your Return"/>
+                                        <connections>
+                                            <action selector="calculateReturn:" destination="YCH-Uf-to6" eventType="touchUpInside" id="G7A-g2-82s"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOK-BK-7KC">
-                                        <rect key="frame" x="147.33333333333334" y="130.66666666666669" width="45.666666666666657" height="26"/>
+                                        <rect key="frame" x="20" y="130.66666666666669" width="300" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Yba-QM-ENU"/>
                                             <constraint firstAttribute="width" constant="300" id="qwZ-rX-PVO"/>
@@ -276,6 +279,7 @@
                     <connections>
                         <outlet property="interestLabel" destination="AQb-dW-kCc" id="8Fc-t8-4qm"/>
                         <outlet property="interestStepper" destination="Jp0-V4-MDY" id="OJi-uf-jEI"/>
+                        <outlet property="investmentReturn" destination="YOK-BK-7KC" id="ewM-cK-2Pe"/>
                         <outlet property="timeLabel" destination="vfd-1M-nL0" id="Imy-38-5Ab"/>
                         <outlet property="timeSlider" destination="3eY-Iw-e6m" id="MA3-jY-51H"/>
                     </connections>
