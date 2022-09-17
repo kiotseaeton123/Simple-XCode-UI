@@ -7,11 +7,26 @@
 
 import UIKit
 
+//code to remove keyboard: https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+extension UIViewController {
+    
+        func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action:            #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController, UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Welcome S&P"
+        
     }
     
     let basicInfo = [
@@ -84,13 +99,15 @@ class ViewController: UIViewController, UITableViewDataSource{
 
         if let _ = segue.destination as? ViewController,
            let cell = sender as? UITableViewCell{
-            print(cell.textLabel!)
-//            omg how to identify 
+//            trying to segue based on table view section
             if(cell.textLabel?.text == "S&P Timeline"){
                 performSegue(withIdentifier: "segueToROI", sender: cell)
-
-            }else{
+                
+            }else if(cell.textLabel?.text == "roiCalculator"){
                 performSegue(withIdentifier: "segueToSurprise", sender: cell)
+                
+            }else{
+                performSegue(withIdentifier: "segueToCollectionView", sender: cell)
             }
         }
         
