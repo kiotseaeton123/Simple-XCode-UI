@@ -14,6 +14,13 @@ class ThirdViewController: UIViewController {
         self.title = "Surprise"
 
     }
+    @IBAction func changedSegment(_ sender: UISegmentedControl){
+        if sender.selectedSegmentIndex == 0{
+            view.backgroundColor = .cyan
+        }else{
+            view.backgroundColor = .systemPink
+        }
+    }
     
 
 
